@@ -1,0 +1,152 @@
+<!-- This is a first example of using a template -->
+
+<head>
+
+<!-- include our libraries and css files -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/handlebars-v3.0.3.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="AnimalsData.js"></script>
+<script src="assignment.js"></script>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="assignment.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="content" role="main"> </div>   
+
+<script id="album-template" type="text/x-handlebars-template">
+<!-- <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsed-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ANIMALS</a>
+    </div>
+<div class="collapse navbar-collapse" id="collapsed-navbar">
+<ul class="nav navbar-nav">
+{{#each category}}
+  <li class="fade in"><a href="#{{name}}" data-toggle="tab">{{name}}</a></li>
+{{/each}}
+</ul>
+    </div>
+</nav>
+    <div class="row">
+        <div class="container-fluid">
+        <div class="tab-content">
+        {{#each category}}
+                <div id="{{name}}" class="tab-pane">
+                    <div class="col-md-12 text-center"><h2>{{name}}</h2></div>
+                    {{#each animals}}
+                            <div class="row">
+                                
+                            <div class="col-xs-12 col-md-3">
+                                <img class="img-rounded img-responsive center-block" src="{{image2}}"/>
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <div class="container">
+                            <h3>{{name}}</h3>   
+                                <p>{{description}}</p>
+                                    </div>
+                            </div>
+                            </div>
+                        {{/each}}
+                    </div>
+            {{/each}}
+                </div>
+
+            </div>
+        </div>
+    
+-->
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsed-navbar" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" data-toggle="tab" href="#home">ANIMALS</a>
+    </div>
+<div class="collapse navbar-collapse" id="collapsed-navbar">
+<ul class="nav navbar-nav">
+  <li class="fade in"><a href="#home" data-toggle="tab">Home</a></li>
+{{#each category}}
+  <li class="fade in"><a href="#{{name}}" data-toggle="tab">{{name}}</a></li>
+{{/each}}
+</ul>
+    </div>
+</nav>
+    <div class="row">
+        <div class="container-fluid">
+        <div class="tab-content">
+            
+            <div id="home" class="tab-pane active fade in">
+
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active"><div class="carousel-caption">Welcome to the animal kingdom!!!</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Kittyply_edit1.jpg/440px-Kittyply_edit1.jpg" alt="..."></div>
+      {{#each category}}
+      {{#each animals}}
+      <div class="item">
+      <div class="carousel-caption">
+          {{name}}
+      </div>
+      <img src="{{image1}}" alt="...">
+
+                     
+    </div>
+ {{/each}} {{/each}}
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->
+                
+                
+                </div>
+            {{#each category}}
+                <div id="{{name}}" class="tab-pane">
+                <div class="col-md-12 text-center"><h2>{{name}}</h2></div>
+                    {{#each animals}}
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">{{name}}</h3>
+                                        </div>
+                                        <div class="panel-image">
+                                            <img src="{{image2}}" class="panel-image-preview" />
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>{{description}}</p>
+                                        </div>
+                                    </div>
+                                        </div>
+                            </div>
+                    </div>
+        {{/each}}
+            </div>
+    {{/each}} </div> </div> </div>
+</script>
+
+</body>

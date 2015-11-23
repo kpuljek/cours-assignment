@@ -1,0 +1,47 @@
+/* put your css code here */
+h2 {
+background-color:#eeeeee;
+padding:15px;
+text-transform: uppercase;
+}
+
+.media {
+    padding:10px;
+}
+
+
+.container-fluid p {
+    color:dimgrey;
+    font-size:1.1em;
+margin-top:15px;
+
+}
+
+
+.panel-image img.panel-image-preview {
+    width: 100%;
+}
+
+
+.title {
+    clear:left;
+    padding:15px}
+
+.animal {
+    border:1px solid black;
+}
+
+.carousel-inner {
+  height: 800px;
+}
+
+.carousel-inner img{
+    width:100%;
+    height:auto;
+}
+
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+    font-size:5em;
+}
